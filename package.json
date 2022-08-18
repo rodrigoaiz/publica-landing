@@ -1,0 +1,19 @@
+{
+  "name": "publica-landing",
+  "version": "1.0.0",
+  "description": "Landing page para convocatoria 'publica' del PACCH",
+  "main": "index.html",
+  "scripts": {
+    "test": "run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoaiz/publica-landing.git"
+  },
+  "author": "info@rodrigoaizpuru.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigoaiz/publica-landing/issues"
+  },
+  "homepage": "https://github.com/rodrigoaiz/publica-landing#readme"
+}

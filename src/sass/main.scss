@@ -1,0 +1,56 @@
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+Imports
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Maven+Pro:wght@500&family=Rubik:wght@900&display=swap');
+//@import "~rfs/scss";
+@import"reset.scss";
+@import"colors.scss";
+@import"mixins.scss";
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+Fuentes
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+$tipo__titulos: 'Rubik', sans-serif;
+$tipo__subtitulos: 'Maven Pro', sans-serif;
+$tipo__textos: 'Karla', sans-serif;
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+Header
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+.header{
+  &__navbar{
+    @include flex(flex, row, wrap, space-between, center);
+    width: 100%;
+    max-height: 5rem;
+    background-color:$color__morado;
+    backdrop-filter: blur(2em);
+    position: fixed;
+    z-index: 2;
+    border-radius:0;
+    margin:0;
+    padding: 2em;
+    top: 0;
+    &__ul{
+      @include flex(flex, row, wrap, center, center);
+      li{
+        @include parrafo($tipo__subtitulos, 1.5em, 900, $color__blanco);
+        text-transform: uppercase;
+      }
+    }
+    &__logo{
+      max-height: 3em;
+    }
+  }
+
+}

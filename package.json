@@ -4,7 +4,8 @@
   "description": "Landing page para convocatoria 'publica' del PACCH",
   "main": "index.html",
   "scripts": {
-    "test": "run dev"
+    "watch": "sass --watch src/sass:dist/css",
+    "compress": "sass src/sass:dist/css --output-style compressed"
   },
   "repository": {
     "type": "git",

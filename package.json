@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rodrigoaiz/publica-landing/issues"
   },
-  "homepage": "https://github.com/rodrigoaiz/publica-landing#readme"
+  "homepage": "https://github.com/rodrigoaiz/publica-landing#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
 }

@@ -33,8 +33,7 @@ Header
     @include flex(flex, row, wrap, space-between, center);
     width: 100%;
     max-height: 5rem;
-    background-color:$color__morado;
-    backdrop-filter: blur(2em);
+    /* backdrop-filter: blur(2em); */
     position: fixed;
     z-index: 2;
     border-radius:0;
@@ -43,14 +42,50 @@ Header
     top: 0;
     &__ul{
       @include flex(flex, row, wrap, center, center);
+      li:first-child{
+        margin-left: 0;
+      }
       li{
-        @include parrafo($tipo__subtitulos, 1.5em, 900, $color__blanco);
+        @include parrafo($tipo__subtitulos,clamp(0.8rem,1.5vw,2rem), 900, $color__blanco);
         text-transform: uppercase;
+        margin-left: 1em;
       }
     }
     &__logo{
       max-height: 3em;
     }
   }
+
+}
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+Hero
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+.hero {
+  min-height: 100vh;
+  background-color: $color__morado;
+  @include flex(flex, row, wrap, space-around, center);
+  &__image {}
+
+  &__info {
+    background-color: aqua;
+    max-width:30em;
+
+    &__title {
+      @include parrafo($tipo__titulos, clamp(1rem,2vw,4rem), 900, $color__blanco);
+      text-transform: uppercase;
+      span{
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        width: 100%;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+
+  &__silder {}
 
 }

@@ -7,15 +7,17 @@
     <title>Publica en el Portal</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
+    <script src="js/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header class="header">
       <nav class="header__navbar"  id="header">
         <ul class="header__navbar__ul">
-          <li class="header__navbar__li">¿Por qué?</li>
-          <li class="header__navbar__li">¿Cómo?</li>
-          <li class="header__navbar__li">Contacto</li>
+          <li class="header__navbar__li"><a href="#porque">¿Por qué?</a></li>
+          <li class="header__navbar__li"><a href="#como">¿Cómo?</a></li>
+          <li class="header__navbar__li"><a href="#contacto">Contacto</a></li>
         </ul>
         <img src="img/logo-portal-cch.svg" alt="logo" class="header__navbar__logo" />
       </nav>
@@ -58,12 +60,13 @@
           <h2 class="porque__title">¿Por qué?</h2>
           <p>Desde hace más de 10 años el Portal Académico se ha consolidado como un espacio de consulta abierto en el que se concentran las actividades académicas del Colegio, ofreciendo a su comunidad recursos educativos digitales de calidad acordes con los temas de los Programas de Estudio.</p>
           <p>El CCH invita a todos los profesores a publicar y difundir en el Portal Académico los Proyectos de Apoyo a la Docencia, productos de los grupos de trabajo y los materiales didácticos en formato digital relacionados con las asignaturas que imparten.</p>
+          <p>Podrán participar <strong class="big">todos</strong> los profesores que han elaborado materiales didácticos. </p>
           <h3 class="porque__subtitle">El Portal Académico…</h3>
           <ul class="porque__ul">
-            <li class="porque__ul__li">Cuenta con más de 800,000 visitas al mes.</li>
-            <li class="porque__ul__li">Deacuerdo a una encuesta realizada en 2021, se observó que el 90% de los alumnos del CCH han consultado los recursos del Portal para apoyar su aprendizaje.</li>
-            <li class="porque__ul__li">Tiene un alcance a nivel nacional e internacional (principalmente Centro y Sudamérica, USA y España).</li>
-            <li class="porque__ul__li">Los materiales tienen alta calidad y están elaborados acorde al Plan de Estudios del Colegio.</li>
+            <li class="porque__ul__li">Cuenta con más de <strong>800,000 visitas al mes</strong>.</li>
+            <li class="porque__ul__li">Deacuerdo a una encuesta realizada en 2021, se observó que el <strong>90% de los alumnos del CCH</strong> han consultado los recursos del Portal para apoyar su aprendizaje.</li>
+            <li class="porque__ul__li">Tiene un alcance a <strong>nivel nacional e internacional</strong> (principalmente Centro y Sudamérica, USA y España).</li>
+            <li class="porque__ul__li">Los materiales tienen <strong>alta calidad</strong> y están elaborados acorde al Plan de Estudios del Colegio.</li>
           </ul>
         </article>
         <div class="porque__alert">
@@ -71,8 +74,20 @@
         </div>
         <article class="container">
           <div class="porque__grafica">
-            <img src="" alt="grafica">
-            <caption class="porque__grafica__caption">Consigue más difusión para tus recursos gracias al creciente número de visitas que registra el Portal año con año.</caption>
+            <div class="hero__slider__circle">
+              <div class="hero__slider__circle__spin">
+                <svg>
+                  <circle cx="50%" cy="50%" r="4rem"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="porque__grafica__container">
+              <h3 class="porque__grafica__title">Visitas al Portal Académico en millones</h3>
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              <div class="porque__grafica__caption">Consigue más difusión para tus recursos gracias al creciente número de visitas que registra el Portal año con año. Fuente: Portal Académico (2022).</div>
+            </div>
           </div>
         </article>
         <article class="porque__video">
@@ -93,7 +108,7 @@
       </div>
       <section class="como" id="como">
         <article class="container">
-          <h2 class="como__title">¿Como?</h2>
+          <h2 class="como__title">¿Cómo?</h2>
           <h3 class="como__subtitle">¿Qué debo hacer?</h3>
           <ul class="como__ul">
             <li class="como__ul__li">En el caso de publicaciones, se publicará una vez que se haya obtenido el aval del Comité Editorial del CCH.</li>
@@ -105,7 +120,7 @@
           <p>Objetos de aprendizaje, libros pedagógicos, estrategias, guías, paquetes didácticos, programas operativos, sitios web, aplicaciones, cursos, productos de proyectos INFOCAB, etc.</p>
         </article>
         <div class="como__footer">
-          <p>Para más información visita <a href="https://portalacademico.cch.unam.mx/publica">la siguiente página</a></p>
+          <p>Para más información visita la siguiente <a href="https://portalacademico.cch.unam.mx/publica">página</a></p>
         </div>
       </section>
       <section class="contacto" id="contacto">
@@ -113,18 +128,24 @@
           <h2 class="contacto__title">Contacto</h2>
           <p class="contacto__p">Si deseas entregarlo físicamente agenda una cita al teléfono: 5622 0021 ext. 295, en la Coordinación del Portal Académico.</p>
         </article>
-        <article class="container">
+        <article>
           <div class="contacto__form">
             <div class="contacto__form__desc">
               <p class="contacto__p">Entendemos que puedes tener más dudas, escríbenos y en breve estaremos en contacto.</p>
             </div>
-            <div class="contacto__form">
+            <div class="contacto__form__formu">
+              <div class="hero__slider__circle">
+                <div class="hero__slider__circle__spin">
+                  <svg>
+                    <circle cx="50%" cy="50%" r="4rem"></circle>
+                  </svg>
+                </div>
+              </div>
               <form class="contacto__form__theform" action="/action_page.php">
-                <label for="fname">Email:</label>
-                <input type="text" id="fname" name="fname" value="John">
-                <label for="lname">Mensaje</label>
-                <input type="text" id="lname" name="lname" value="Doe">
-                <input type="submit" value="Submit">
+                <input type="text" id="fname" name="fname" value="Nombre">
+                <input type="text" id="lname" name="lname" value="Email">
+                <textarea name="textarea" rows="5" cols="50" value="Mensaje">Escribe tu mensaje</textarea>
+                <input class="contacto__boton" type="submit" value="Enviar">
               </form>
             </div>
           </div>
@@ -133,15 +154,21 @@
     </main>
     <footer class="footer">
       <article class="footer__logo"">
-        <img src="" alt="logo" class="footer__logo__img" />
+        <img src="img/logo-portal-cch.svg" alt="logo" class="footer__logo__img" />
       </article>
-      <article>
+      <article class="footer__desc">
         <h2 class="footer__title">Nosotros</h2>
-        <p><a>Aviso legal</a></p>
-        <p><a>Créditos</a></p>
+        <p><a href="https://portalacademico.cch.unam.mx/aviso-legal" target="_blank" title="Aviso legal">Aviso legal</a></p>
+        <p><a href="https://portalacademico.cch.unam.mx/creditos" target="_blank" title="Creditos">Créditos</a></p>
         <p>Recomendamos utilizar el explorador web Mozilla Firefox, Google Chrome, Internet Explorer versión 9 o superior.</p>
-        <p>Escuela Nacional Colegio de Ciencias y Humanidades | Hecho en México | © Todos los derechos reservados. Esta página electrónica puede ser reproducida, sin objeto comercial, siempre y cuando su contenido no se mutile o altere, se cite la fuente completa y la dirección Web de conformidad con el artículo 148 de la Ley Federal del Derecho de Autor, de otra forma, se requerirá permiso previo y por escrito de la UNAM.</p>
+        <p class="footer__legal">Escuela Nacional Colegio de Ciencias y Humanidades | Hecho en México | © Todos los derechos reservados. Esta página electrónica puede ser reproducida, sin objeto comercial, siempre y cuando su contenido no se mutile o altere, se cite la fuente completa y la dirección Web de conformidad con el artículo 148 de la Ley Federal del Derecho de Autor, de otra forma, se requerirá permiso previo y por escrito de la UNAM.</p>
       </article>
     </footer>
   </body>
+    <script>
+      const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+    </script>
 </html>

@@ -43,7 +43,7 @@ Header
     width: 100%;
     max-height: 5rem;
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     border-radius:0;
     margin:0;
     padding: 2em;
@@ -63,7 +63,7 @@ Header
         margin-left: 0;
       }
       li{
-        @include parrafo($tipo__subtitulos,clamp(0.8rem,1.25vw,2rem), 900, $color__blanco);
+        @include parrafo($tipo__subtitulos,clamp(0.8rem,1.25vw,2rem), 500, $color__blanco);
         text-transform: uppercase;
         margin-left: 3em;
         padding: 0.5rem 0.9rem;
@@ -123,18 +123,18 @@ Hero
     max-width: 28rem;
     @include flex(flex, column, nowrap, center, start);
     &__title {
-      @include parrafo($tipo__titulos, clamp(1rem,2vw,4rem), 900, $color__blanco);
+      @include parrafo($tipo__titulos, clamp(2rem,4vw,5rem), 900, $color__blanco);
      // max-width: 80%;
       text-transform: uppercase;
       span{
-        font-size: clamp(2.5rem, 5vw, 5rem);
+        font-size: clamp(2.5rem, 6vw, 6rem);
         width: 100%;
         margin: auto;
         display: block;
       }
     }
     &__button{
-      @include parrafo($tipo__subtitulos, clamp(1rem, 2vw, 2rem), 900, $color__blanco);
+      @include parrafo($tipo__subtitulos, clamp(1rem, 2vw, 2rem), 500, $color__blanco);
       text-align: center;
       padding: 1rem;
       margin-top:1rem;
@@ -195,10 +195,13 @@ Hero
 
     &__title{
       position: absolute;
-      top: -1.5rem;
+      top: -2rem;
       right: 0.5rem;
-      @include parrafo($tipo__titulos, clamp(1rem,1.5vw,1.5rem), 900, $color__blanco);
+      @include parrafo($tipo__subtitulos, clamp(1rem,2vw,2rem), 500, $color__blanco);
       z-index: 3;
+      @include media(450px){
+        top: 0.5rem;
+      }
     }
 
     &__slide{
@@ -234,15 +237,18 @@ Porque
   }
 
 }
-
+.big{
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
 .porque {
   &__title {
-    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 400, $color__negro);
+    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 900, $color__negro);
     text-align: center;
     margin-bottom: 2rem;
+    text-transform: uppercase;
   }
   &__subtitle {
-    @include parrafo($tipo__titulos, clamp(1.8rem, 2vw, 2rem), 400, $color__negro);
+    @include parrafo($tipo__titulos, clamp(1.8rem, 2vw, 2rem), 900, $color__negro);
     margin-bottom: 2rem;
   }
   &__ul {
@@ -259,31 +265,48 @@ Porque
     }
   }
   &__alert {
-    @include parrafo($tipo__subtitulos, clamp(2rem, 2vw, 2.5rem), 900, $color__negro);
+    @include parrafo($tipo__subtitulos, clamp(2rem, 2vw, 2.5rem), 500, $color__negro);
     background-color: $color__rojo;
     text-align: center;
     padding: 2rem 0;
     margin:2rem 0;
   }
 
-  &__grafica {}
-
-
-
-
-
-
-
+  &__grafica {
+    margin: 5rem 0;
+    position: relative;
+    &__container{
+      position: relative;
+      background-color:$color__blanco;
+      z-index: 4;
+      box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
+    &__title{
+      @include parrafo($tipo__subtitulos, clamp(1.5rem,3vw, 3rem), 500, $color__verde);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    &__caption {
+      @include parrafo($tipo__subtitulos, clamp(1rem, 1.5vw, 1.5rem), 500, $color__verde);
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
   &__video {
     margin: 3rem 0 0;
     @include flex(flex, row, wrap, center, center);
+    padding: 0 1rem;
     &__wrapper {
-      width: 45%;
+      width: 50%;
+      @include media (450px){
+        width: 100%;
+      }
     }
     &__title{
       @include flex(flex, row, wrap, center, center);
       min-height: 100%;
-      @include parrafo($tipo__subtitulos, clamp(3rem, 3vw, 3.5rem), 900, $color__negro);
+      @include parrafo($tipo__subtitulos, clamp(1.5rem, 3vw, 3.5rem), 500, $color__rojo);
       text-align: center;
     }
     &__elvideo{
@@ -318,7 +341,10 @@ divider
   margin: 3rem 0;
   &__img{
     text-align: center;
-    max-width: 30%;
+    max-width: 50%;
+    @include media(450px){
+      max-width: 90%;
+    }
   }
 }
 /*
@@ -332,12 +358,18 @@ como
 .como {
   &__footer {
     background-color: $color__verde;
-    @include parrafo($tipo__subtitulos, clamp(2rem, 2vw, 2.5rem), 900, $color__blanco);
+    @include parrafo($tipo__subtitulos, clamp(1.5rem, 2.5vw, 2.5rem), 500, $color__blanco);
     text-align: center;
     padding: 2rem 0;
+    margin-top: 2rem;
     a{
-      color: red;
+      transition: all 0.5s ease;
+      color: $color__morado;
       text-decoration: underline;
+      &:hover{
+        color: $color__morado__h;
+
+      }
     }
   }
   &__ul {
@@ -356,13 +388,158 @@ como
   }
 
   &__subtitle {
-    @include parrafo($tipo__titulos, clamp(1.8rem, 2vw, 2rem), 400, $color__negro);
+    @include parrafo($tipo__titulos, clamp(1.8rem, 2vw, 2rem), 900, $color__negro);
     margin-bottom: 2rem;
   }
 
   &__title {
-    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 400, $color__negro);
+    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 900, $color__negro);
     text-align: center;
     margin-bottom: 2rem;
+    text-transform: uppercase;
   }
+}
+
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+contacto
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+
+.contacto {
+  background-color:$color__morado;
+  text-align: center;
+  padding-bottom: 3rem;
+        &__boton {
+          box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.5);
+          transition: all 0.5s ease;
+          &:hover{
+            background-color: $color__rojo__h;
+            box-shadow: 1rem 1rem 2.5rem 0 rgba(0, 0, 0, 0.5);
+          }
+        }
+  &__form {
+    padding: 4rem 3rem 0;
+    @include flex(flex, row, wrap, space-between, center);
+    @include media(450px){
+      padding: 1rem 1rem 0;
+    }
+
+    &__desc{
+      width: 50%;
+      text-align: left;
+      //margin-top: 2rem;
+      @include flex(flex, row, wrap, center, center);
+          @include media(450px) {
+            min-width: 100%;
+          }
+    }
+
+    &__formu{
+      width: 50%;
+      position: relative;
+      @include media(450px) {
+        min-width: 100%;
+        margin-top: 2rem;
+      }
+
+    }
+    form{
+      position: relative;
+      z-index: 4;
+    }
+    textarea{
+      width: 100%;
+      background-color: $color__blanco;
+      color: $color__negro !important;
+      @include parrafo($tipo__subtitulos, clamp(1.2rem, 1.5vw, 1.5rem), 500, $color__blanco);
+      margin-bottom:1rem;
+      padding: 1rem;
+    }
+    input{
+      width: 100%;
+      background-color:$color__rojo;
+      color: $color__blanco;
+      @include parrafo($tipo__subtitulos, clamp(1.2rem, 1.5vw, 1.5rem), 500, $color__blanco);
+      padding: 1rem;
+
+      &:not(:last-child) {
+        background-color: $color__blanco;
+        color: $color__negro;
+        margin-bottom:1rem;
+      }
+    }
+  }
+
+  &__p {
+    @include parrafo($tipo__subtitulos, clamp(1.5rem, 2vw, 2rem), 500, $color__blanco);
+    line-height:2rem;
+
+  }
+
+  &__title {
+
+    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 900, $color__blanco);
+    text-align: center;
+    padding:2rem 0;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+footer
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+.footer {
+  padding: 2rem 0;
+  background-color: $color__verde;
+    a {
+      transition: all 0.5s ease;
+      text-decoration: underline;
+      &:hover {
+        color: $color__morado;
+        text-decoration: none;
+      }
+    }
+  @include flex(flex, row, wrap, space-around, center);
+  &__logo {
+    @include flex(flex, row, wrap, center, center);
+    width: 33%;
+    @include media(450px){
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+    &__img{
+      max-width: 100%;
+    }
+  }
+  &__desc{
+    color: $color__blanco;
+    width: 50%;
+    @include media(450px) {
+      width: 90%;
+    }
+  }
+  &__title {
+    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 900, $color__blanco);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  &__legal{
+    @include parrafo($tipo__textos, clamp(1rem, 1.1vw, 1.1rem), 400, $color__blanco);
+    line-height: 1.3rem;
+    @include media(450px) {
+      text-align: center;
+    }
+  }
+
 }

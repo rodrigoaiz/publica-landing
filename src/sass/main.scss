@@ -42,9 +42,8 @@ Header
     @include flex(flex, row, wrap, space-between, center);
     width: 100%;
     max-height: 5rem;
-    /* backdrop-filter: blur(2em); */
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     border-radius:0;
     margin:0;
     padding: 2em;
@@ -87,6 +86,10 @@ Header
   }
 
 }
+.header-down {
+  background-color:$color__morado;
+  transition: all 0.5s ease;
+}
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -101,17 +104,19 @@ Hero
   padding-top: 5rem;
   padding-bottom: 2rem;
   @include media(750px){
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 0;
-     @include flex(flex, column, nowrap, end, center);
+    @include flex(flex, column, nowrap, space-between, center);
   }
   &__image {
     @include flex(flex, row, wrap, center, start);
-    min-width:clamp(20rem, 35vw, 40rem);
+    min-width:clamp(18rem, 35vw, 40rem);
     @include media(321px){
       display: none;
     }
-
+    @include media(420px) {
+      order: -1;
+    }
   }
 
   &__info {
@@ -241,24 +246,20 @@ Porque
     margin-bottom: 2rem;
   }
   &__ul {
-    list-style: none;
     &__li{
       margin-bottom: 2rem;
-
-      &::before{
-         content: '😃';
-        color: $color__verde;
-        font-weight: bold;
-        display: inline-block;
-        float: left;
-        width: 1em;
-        font-size: 2rem;
-        margin-right: 1rem;
+      //list-style: outside;
+      padding-left: 1rem;
+      &::marker{
+        /* content: '😃'; */
+        content: '⦿';
+        color: $color__morado;
+        font-weight: 900;
       }
     }
   }
   &__alert {
-    @include parrafo($tipo__subtitulos, clamp(2.5rem, 2.5vw, 2.5rem), 900, $color__negro);
+    @include parrafo($tipo__subtitulos, clamp(2rem, 2vw, 2.5rem), 900, $color__negro);
     background-color: $color__rojo;
     text-align: center;
     padding: 2rem 0;
@@ -273,5 +274,95 @@ Porque
 
 
 
-  &__video {}
+  &__video {
+    margin: 3rem 0 0;
+    @include flex(flex, row, wrap, center, center);
+    &__wrapper {
+      width: 45%;
+    }
+    &__title{
+      @include flex(flex, row, wrap, center, center);
+      min-height: 100%;
+      @include parrafo($tipo__subtitulos, clamp(3rem, 3vw, 3.5rem), 900, $color__negro);
+      text-align: center;
+    }
+    &__elvideo{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+divider
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+
+.divider{
+  @include flex(flex, row, wrap, center, center);
+  background-color:$color__verde;
+  margin: 3rem 0;
+  &__img{
+    text-align: center;
+    max-width: 30%;
+  }
+}
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+como
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+
+.como {
+  &__footer {
+    background-color: $color__verde;
+    @include parrafo($tipo__subtitulos, clamp(2rem, 2vw, 2.5rem), 900, $color__blanco);
+    text-align: center;
+    padding: 2rem 0;
+    a{
+      color: red;
+      text-decoration: underline;
+    }
+  }
+  &__ul {
+    &__li {
+      margin-bottom: 2rem;
+      //list-style: outside;
+      padding-left: 1rem;
+
+      &::marker {
+        /* content: '😃'; */
+        content: '⦿';
+        color: $color__morado;
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include parrafo($tipo__titulos, clamp(1.8rem, 2vw, 2rem), 400, $color__negro);
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 400, $color__negro);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }

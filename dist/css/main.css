@@ -422,9 +422,8 @@ Header
   align-content: center;
   width: 100%;
   max-height: 5rem;
-  /* backdrop-filter: blur(2em); */
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   border-radius: 0;
   margin: 0;
   padding: 2em;
@@ -482,6 +481,11 @@ Header
   }
 }
 
+.header-down {
+  background-color: rgb(79, 52, 75);
+  transition: all 0.5s ease;
+}
+
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -501,11 +505,11 @@ Hero
 }
 @media screen and (max-width: 750px) {
   .hero {
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 0;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -514,11 +518,16 @@ Hero
   flex-flow: row wrap;
   justify-content: center;
   align-content: start;
-  min-width: clamp(20rem, 35vw, 40rem);
+  min-width: clamp(18rem, 35vw, 40rem);
 }
 @media screen and (max-width: 321px) {
   .hero__image {
     display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .hero__image {
+    order: -1;
   }
 }
 .hero__info {
@@ -659,31 +668,128 @@ Porque
   color: rgb(43, 43, 43);
   margin-bottom: 2rem;
 }
-.porque__ul {
-  list-style: none;
-}
 .porque__ul__li {
   margin-bottom: 2rem;
+  padding-left: 1rem;
 }
-.porque__ul__li::before {
-  content: "😃";
-  color: rgb(73, 177, 135);
-  font-weight: bold;
-  display: inline-block;
-  float: left;
-  width: 1em;
-  font-size: 2rem;
-  margin-right: 1rem;
+.porque__ul__li::marker {
+  /* content: '😃'; */
+  content: "⦿";
+  color: rgb(79, 52, 75);
+  font-weight: 900;
 }
 .porque__alert {
   font-family: "Maven Pro", sans-serif;
-  font-size: clamp(2.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(2rem, 2vw, 2.5rem);
   font-weight: 900;
   color: rgb(43, 43, 43);
   background-color: rgb(250, 81, 67);
   text-align: center;
   padding: 2rem 0;
   margin: 2rem 0;
+}
+.porque__video {
+  margin: 3rem 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.porque__video__wrapper {
+  width: 45%;
+}
+.porque__video__title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  min-height: 100%;
+  font-family: "Maven Pro", sans-serif;
+  font-size: clamp(3rem, 3vw, 3.5rem);
+  font-weight: 900;
+  color: rgb(43, 43, 43);
+  text-align: center;
+}
+.porque__video__elvideo {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.porque__video__elvideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+divider
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+.divider {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(73, 177, 135);
+  margin: 3rem 0;
+}
+.divider__img {
+  text-align: center;
+  max-width: 30%;
+}
+
+/*
+**************************************************
+––––––––––––––––––––––––––––––––––––––––––––––––––
+como
+––––––––––––––––––––––––––––––––––––––––––––––––––
+**************************************************
+*/
+.como__footer {
+  background-color: rgb(73, 177, 135);
+  font-family: "Maven Pro", sans-serif;
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem 0;
+}
+.como__footer a {
+  color: red;
+  text-decoration: underline;
+}
+.como__ul__li {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+.como__ul__li::marker {
+  /* content: '😃'; */
+  content: "⦿";
+  color: rgb(79, 52, 75);
+  font-weight: 900;
+}
+.como__subtitle {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+  margin-bottom: 2rem;
+}
+.como__title {
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

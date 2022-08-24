@@ -7,10 +7,11 @@
     <title>Publica en el Portal</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
-      <nav class="header__navbar">
+      <nav class="header__navbar"  id="header">
         <ul class="header__navbar__ul">
           <li class="header__navbar__li">¿Por qué?</li>
           <li class="header__navbar__li">¿Cómo?</li>
@@ -75,33 +76,36 @@
           </div>
         </article>
         <article class="porque__video">
-          <div class="porque__video__elvideo">
-            <iframe src="" frameborder="0"></iframe>
+          <div class="porque__video__wrapper">
+            <div class="porque__video__elvideo">
+              <iframe src="https://www.youtube.com/embed/kt9gJuOtYXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
-          <div class="porque__video__title">
-            Publicar es más fácil de lo que crees ¡Anímate!
+          <div class="porque__video__wrapper">
+            <div class="porque__video__title">
+              Publicar es más fácil de lo que crees ¡Anímate!
+            </div>
           </div>
         </article>
       </section>
       <div class="divider">
-        <img src="" alt="profesor libros" class="divider__img">
+        <img src="img/docente1.svg" alt="profesor libros" class="divider__img">
       </div>
       <section class="como" id="como">
         <article class="container">
           <h2 class="como__title">¿Como?</h2>
           <h3 class="como__subtitle">¿Qué debo hacer?</h3>
           <ul class="como__ul">
-            <li class="como__li">En el caso de publicaciones, se publicará una vez que se haya obtenido el aval del Comité Editorial del CCH.</li>
-            <li class="como__li">Para el caso de material audiovisual y software, se publicará una vez que se haya obtenido el aval de un Comité de Pares.</li>
-            <li class="como__li">Se aceptan contenidos en formato de imagen, texto, video, audio y software.</li>
-            <li class="como__li">Para ser publicados, los recursos deberán incluir fuentes consultadas en formato APA, en total apego a los derechos de autor. </li>
+            <li class="como__ul__li">En el caso de publicaciones, se publicará una vez que se haya obtenido el aval del Comité Editorial del CCH.</li>
+            <li class="como__ul__li">Para el caso de material audiovisual y software, se publicará una vez que se haya obtenido el aval de un Comité de Pares.</li>
+            <li class="como__ul__li">Se aceptan contenidos en formato de imagen, texto, video, audio y software.</li>
+            <li class="como__ul__li">Para ser publicados, los recursos deberán incluir fuentes consultadas en formato APA, en total apego a los derechos de autor. </li>
           </ul>
           <h3 class="como__subtitle">¿Qué materiales pueden publicarse?</h3>
           <p>Objetos de aprendizaje, libros pedagógicos, estrategias, guías, paquetes didácticos, programas operativos, sitios web, aplicaciones, cursos, productos de proyectos INFOCAB, etc.</p>
         </article>
         <div class="como__footer">
-          <p>Para más información visita</p>
-          <p><a href="https://portalacademico.cch.unam.mx/publica">la siguiente páginaa</a></p>
+          <p>Para más información visita <a href="https://portalacademico.cch.unam.mx/publica">la siguiente página</a></p>
         </div>
       </section>
       <section class="contacto" id="contacto">

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publica en el Portal</title>
     <link rel="stylesheet" href="css/main.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="js/main.js"></script>
     <script src="js/chart.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
@@ -31,7 +33,7 @@
         <article class="hero__image">
           <img src="img/hero-img.svg" alt="ilustracion" class="hero__image__img" />
         </article>
-        <div class="hero__slider">
+        <div class="hero__slider slider">
           <div class="hero__slider__circle">
             <div class="hero__slider__circle__spin">
               <svg>
@@ -40,16 +42,16 @@
             </div>
           </div>
           <h2 class="hero__slider__title">¿Sabías que?</h2>
-          <div class="hero__slider__slide active">
+          <div class="hero__slider__slide slide">
             El portal Académico registra <strong>800 mil visitas mensuales</strong>, por lo que tus materiales didácticos son más consultados y accesibles (incluso en el extranjero).
           </div>
-          <div class="hero__slider__slide">
+          <div class="hero__slider__slide slide">
             Durante 2021 el Portal tuvo un <strong>incremento significativo</strong> en el número de visitas, pasó de 5 a 9 millones.
           </div>
-          <div class="hero__slider__slide">
+          <div class="hero__slider__slide slide">
             Debido a la contingencia sanitaria, la necesidad de las clases en línea y a un aumento en la demanda de plataformas y recursos educativos digitales, el Portal <strong>reafirmó su apoyo a la comunidad educativa</strong>.
           </div>
-          <div class="hero__slider__slide">
+          <div class="hero__slider__slide slide">
             El Portal Académico es un sitio en el que estudiantes y docentes del Bachillerato pueden conocer los <strong>recursos educativos</strong> que se producen en el CCH.
           </div>
         </div>
@@ -165,6 +167,7 @@
       </article>
     </footer>
   </body>
+  <script src="js/slide.js"></script>
     <script>
       const myChart = new Chart(
         document.getElementById('myChart'),

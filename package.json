@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/rodrigoaiz/publica-landing#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "sass": "^1.54.5"
   }
 }

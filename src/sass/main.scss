@@ -97,9 +97,18 @@ slider
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 **************************************************
 */
-
-
-
+.slide1{
+  background-color:$color__verde;
+}
+.slide2{
+  background-color:$color__rojo;
+}
+.slide3{
+  background-color:$color__azul;
+}
+.slide4{
+  background-color:$color__amarillo;
+}
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -164,7 +173,8 @@ Hero
     align-self:end;
     position: relative;
     display: block;
-    max-width: 60%;
+    min-width: 60%;
+    min-height: 10rem;
     @include media(720px){
       min-width: 100%;
     }
@@ -215,21 +225,20 @@ Hero
     }
 
     &__slide{
-      position: relative;
+      position: absolute;
       text-align: center;
       z-index: 2;
+      width: 100%;
       @include parrafo($tipo__textos, clamp(1rem,1.5vw,1.5rem), 400, $color__blanco);
       box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.9);
-      background-color: $color__verde;
+      /* background-color: $color__verde; */
       padding: 2rem;
-
-
     }
   }
 }
-.active{
+/* .active{
   display: none;
-}
+} */
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––

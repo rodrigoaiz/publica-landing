@@ -493,6 +493,22 @@ slider
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 **************************************************
 */
+.slide1 {
+  background-color: rgb(73, 177, 135);
+}
+
+.slide2 {
+  background-color: rgb(250, 81, 67);
+}
+
+.slide3 {
+  background-color: rgb(5, 162, 198);
+}
+
+.slide4 {
+  background-color: rgb(251, 183, 7);
+}
+
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -579,7 +595,8 @@ Hero
   align-self: end;
   position: relative;
   display: block;
-  max-width: 60%;
+  min-width: 60%;
+  min-height: 10rem;
 }
 @media screen and (max-width: 720px) {
   .hero__slider {
@@ -630,22 +647,22 @@ Hero
   }
 }
 .hero__slider__slide {
-  position: relative;
+  position: absolute;
   text-align: center;
   z-index: 2;
+  width: 100%;
   font-family: "Karla", sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 400;
   color: rgb(255, 255, 255);
   box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.9);
-  background-color: rgb(73, 177, 135);
+  /* background-color: $color__verde; */
   padding: 2rem;
 }
 
-.active {
+/* .active{
   display: none;
-}
-
+} */
 /*
 **************************************************
 ––––––––––––––––––––––––––––––––––––––––––––––––––

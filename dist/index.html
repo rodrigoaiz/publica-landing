@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publica en el Portal</title>
     <link rel="stylesheet" href="css/main.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="js/main.js"></script>
-    <script src="js/chart.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body>
     <header class="header">
@@ -146,10 +141,10 @@
                   </svg>
                 </div>
               </div>
-              <form class="contacto__form__theform" action="/action_page.php">
-                <input type="text" id="fname" name="fname" value="Nombre">
-                <input type="text" id="lname" name="lname" value="Email">
-                <textarea name="textarea" rows="5" cols="50" value="Mensaje">Escribe tu mensaje</textarea>
+              <form class="contacto__form__theform" action="/contacto.php">
+                <input type="text" id="fname" name="name" placeholder="Nombre">
+                <input type="text" id="femail" name="email"  placeholder="usuario@email.com">
+                <textarea id="fmessage" name="message" rows="5" cols="50" placeholder="Escribe tu mensaje"></textarea>
                 <input class="contacto__boton" type="submit" value="Enviar">
               </form>
             </div>
@@ -170,6 +165,11 @@
       </article>
     </footer>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chart.js"></script>
   <script src="js/slide.js"></script>
     <script>
       const myChart = new Chart(

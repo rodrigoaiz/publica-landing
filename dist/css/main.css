@@ -685,6 +685,19 @@ Porque
   font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
+@media screen and (max-width: 450px) {
+  .porque {
+    margin-top: 2rem;
+  }
+}
+.porque__img {
+  min-width: 100%;
+}
+@media screen and (max-width: 450px) {
+  .porque__img {
+    display: none;
+  }
+}
 .porque__title {
   font-family: "Rubik", sans-serif;
   font-size: clamp(2rem, 2.5vw, 2.5rem);

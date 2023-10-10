@@ -2,7 +2,8 @@ const labels = [
   '2011',
   '2016',
   '2020',
-  '2021'
+  '2021',
+  '2022'
 ];
 
 const data = {
@@ -12,7 +13,7 @@ const data = {
     backgroundColor: 'rgb(79, 52, 75)',
     hoverBackgroundColor:'rgb(105, 76, 101)',
     borderColor: 'rgb(105, 76, 101)',
-    data: [.225, 3, 5, 9],
+    data: [.225, 3, 5, 9, 10],
   }]
 };
 

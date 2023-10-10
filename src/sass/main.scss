@@ -259,6 +259,16 @@ Porque
   font-size: clamp(1.5rem, 2vw, 2rem);
 }
 .porque {
+  @include media (450px){
+    margin-top: 2rem;
+  }
+
+  &__img{
+    min-width: 100%;
+    @include media (450px){
+      display: none;
+    }
+  }
   &__title {
     @include parrafo($tipo__titulos, clamp(2rem, 2.5vw, 2.5rem), 900, $color__negro);
     text-align: center;
